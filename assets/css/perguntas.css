@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background-color: black;
+  background-color: #FFCC9C;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,6 @@ body {
 }
 
 header {
-  color: white;
   display: flex;
   flex-direction: row;
   margin: 25px;
@@ -39,7 +38,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
 }
 
 #Result_parcial {
@@ -55,8 +53,12 @@ main {
   margin-top: 20px;
 }
 
+#logo{
+  width: 150px;
+  height: 150px;
+}
+
 .setas {
-  background-color: white;
   width: 60px;
   padding: 10px;
   border-radius: 16px;
@@ -98,7 +100,7 @@ h1 {
 }
 
 .alternativa {
-  background-color: #3AFC4D;
+  background-color: #E89950;
   color: black;
   border-radius: 30px;
   font-family: "Roboto";
@@ -116,7 +118,7 @@ h1 {
 
 .alternativa:hover {
   transform: scale(1.1);
-  outline: 3px solid white;
+  outline: 3px solid #874100;
   transition: 0.2s;
   outline-offset: 3px;
 }
