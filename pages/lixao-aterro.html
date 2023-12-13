@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Migração</title>
+  <title>Globalização</title>
   <link href="../assets/css/perguntas.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../assets/imagens/Logo-Atlas.svg" type="image/x-icon">
 </head>
@@ -15,31 +15,27 @@
   </header>
   <main>
     <div class="conteudo">
-      <h2 class="pergunta">Em um mundo globalizado, como as melhorias nas comunicações e no transporte influenciaram a
-        migração
-        internacional?</h2>
+      <h1 class="pergunta">Qual é a diferença entre um lixão e um aterro sanitário?</h1>
       <div class="alternativas">
         <div class="line1">
-          <a id="alt-1" class="alternativa" onclick="clicou(false);">a) Reduziram a migração internacional devido ao
-            fortalecimento das identidades
-            culturais locais.</a>
-          <a id="alt-2" class="alternativa" onclick="clicou(false);">b) Tornaram a migração internacional obsoleta,
-            resultando em uma diminuição
-            significativa dos movimentos populacionais.</a>
+          <a id="alt-1" class="alternativa" onclick="clicou(false);">a) O lixão é um local onde o lixo é depositado em células, enquanto o aterro sanitário é um local onde o lixo é depositado em aterros.</a>
+          <a id="alt-2" class="alternativa" onclick="clicou(false);">b) O lixão é um local onde o lixo é depositado a céu aberto, enquanto o aterro sanitário é um local onde o lixo é depositado em um local fechado.</a>
         </div>
         <div class="line2">
-          <a id="alt-3" class="alternativa" onclick="clicou(true);">c) Facilitaram a migração, permitindo conexões
-            instantâneas e informações sobre
-            oportunidades em outros países.</a>
-          <a id="alt-4" class="alternativa" onclick="clicou(false);">d) Concentraram a migração principalmente em áreas
-            rurais, diminuindo o êxodo
-            urbano global.</a>
+          <a id="alt-3" class="alternativa" onclick="clicou(true);">c) O lixão é um local onde o lixo é depositado sem nenhum tratamento, enquanto o aterro sanitário é um local onde o lixo é depositado com tratamento.</a>
+          <a id="alt-4" class="alternativa" onclick="clicou(false);">d) O lixão é um local onde o lixo é depositado por empresas privadas, enquanto o aterro sanitário é um local onde o lixo é depositado pelo governo.</a>
         </div>
       </div>
     </div>
-    <a href="escravidao.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt=""></a>
-    <a id="next-button" class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/Logo-Atlas.svg"
+    <nav>
+      <a href="problema_principal.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt="voltar"></a>
+      <a id="next-button" href="vantagens_reciclagem.html"><img src="../assets/icons/arrow-right-long-solid.svg" class="setas"
+          alt="próximo"></a>
+    </nav>
+
+    <a class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/Logo-Atlas.svg"
         alt="Atlas de Asgard-logo"></a>
+
   </main>
 
   <script>
@@ -52,8 +48,8 @@
         document.querySelector("a#alt-2").style.backgroundColor = "red";
         document.querySelector("a#alt-4").style.backgroundColor = "red";
         document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
-        document.querySelector("p#Result_parcial").style.color = "green";
-        document.querySelector("h2.pergunta").textContent = "Justificativa: As melhorias nas comunicações e no transporte têm facilitado a migração internacional, tornando mais fácil para as pessoas se conectarem, obterem informações sobre oportunidades em outros países e se deslocarem de maneira mais eficiente para buscar melhores condições de vida, trabalho ou estudo. Isso não reduziu necessariamente a migração, mas a tornou mais acessível e viável para um número maior de pessoas.";
+        document.querySelector("p#Result_parcial").style.color = "#4bdd4b  ";
+        document.querySelector("h1.pergunta").textContent = "Justificativa: 'A expansão do capitalismo moderno pelo mundo deu início à globalização, mas esse fenômeno não ficou restrito somente a essa esfera. Como foi mencionado, o aperfeiçoamento técnico da comunicação e dos transportes propiciou novos vínculos territoriais, permitindo-nos distinguir, para fins metodológicos, ao menos dois diferentes tipos de globalização.' 'A globalização econômica refere-se ao processo de internacionalização da economia' 'A globalização cultural, chamada também de globalização social, corresponde à difusão de elementos culturais em escala planetária'";
         document.querySelector("a#alt-1").setAttribute("disabled", "true");
         document.querySelector("a#alt-2").setAttribute("disabled", "true");
         document.querySelector("a#alt-4").setAttribute("disabled", "true");
