@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Migração</title>
+  <link href="../assets/css/perguntas.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../assets/imagens/Logo-Atlas.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <p id="Result_parcial"></p>
+  </header>
+  <main>
+    <div class="conteudo">
+      <h2 class="pergunta">Em um mundo globalizado, como as melhorias nas comunicações e no transporte influenciaram a
+        migração
+        internacional?</h2>
+      <div class="alternativas">
+        <div class="line1">
+          <a id="alt-1" class="alternativa" onclick="clicou(false);">a) Reduziram a migração internacional devido ao
+            fortalecimento das identidades
+            culturais locais.</a>
+          <a id="alt-2" class="alternativa" onclick="clicou(false);">b) Tornaram a migração internacional obsoleta,
+            resultando em uma diminuição
+            significativa dos movimentos populacionais.</a>
+        </div>
+        <div class="line2">
+          <a id="alt-3" class="alternativa" onclick="clicou(true);">c) Facilitaram a migração, permitindo conexões
+            instantâneas e informações sobre
+            oportunidades em outros países.</a>
+          <a id="alt-4" class="alternativa" onclick="clicou(false);">d) Concentraram a migração principalmente em áreas
+            rurais, diminuindo o êxodo
+            urbano global.</a>
+        </div>
+      </div>
+    </div>
+    <a href="escravidao.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt=""></a>
+    <a id="next-button" class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/Logo-Atlas.svg"
+        alt="Atlas de Asgard-logo"></a>
+  </main>
+
+  <script>
+    var errou = 0
+    document.querySelector("a#next-button").setAttribute("disabled", "true");
+    document.querySelector("a#next-button").style.pointerEvents = "none";
+    function clicou(acertou) {
+      if (acertou === true) {
+        document.querySelector("a#alt-1").style.backgroundColor = "red";
+        document.querySelector("a#alt-2").style.backgroundColor = "red";
+        document.querySelector("a#alt-4").style.backgroundColor = "red";
+        document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
+        document.querySelector("p#Result_parcial").style.color = "green";
+        document.querySelector("h2.pergunta").textContent = "Justificativa: As melhorias nas comunicações e no transporte têm facilitado a migração internacional, tornando mais fácil para as pessoas se conectarem, obterem informações sobre oportunidades em outros países e se deslocarem de maneira mais eficiente para buscar melhores condições de vida, trabalho ou estudo. Isso não reduziu necessariamente a migração, mas a tornou mais acessível e viável para um número maior de pessoas.";
+        document.querySelector("a#alt-1").setAttribute("disabled", "true");
+        document.querySelector("a#alt-2").setAttribute("disabled", "true");
+        document.querySelector("a#alt-4").setAttribute("disabled", "true");
+        document.querySelector("a#alt-1").style.pointerEvents = "none";
+        document.querySelector("a#alt-2").style.pointerEvents = "none";
+        document.querySelector("a#alt-4").style.pointerEvents = "none";
+        document.querySelector("a#next-button").setAttribute("disabled", "false");
+        document.querySelector("a#next-button").style.pointerEvents = "";
+      } else {
+        document.querySelector("p#Result_parcial").textContent = "Resposta errada, tente novamente.";
+        document.querySelector("p#Result_parcial").style.color = "red";
+        errou += 1
+      }
+      if (errou === 2) {
+        window.alert("Que tal pensar um pouco mais?")
+        window.location.href = 'https://questionario-coletivo.agenciaweb.repl.co/index.html'
+        errou += 1
+      }
+    }
+  </script>
+</body>
+
+</html>

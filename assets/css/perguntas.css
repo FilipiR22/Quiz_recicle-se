@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  padding-top: 40px;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+  margin-top: 0;
+  font-size: 3em;
+	padding-top: 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#Result_parcial {
+  font-family: 'Roboto';
+}
+
+.pergunta {
+  font-size: 1.3em;
+  font-family: sans-serif;
+}
+
+.icon-logo {
+  margin-top: 20px;
+}
+
+.setas {
+  background-color: white;
+  width: 60px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.setas:hover {
+  transform: scale(1.1);
+  outline: 2px solid #3AFC4D;
+  transition: 0.1s;
+  outline-offset: 3px;
+}
+
+.alternativas {
+  margin-top: 30px;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.conteudo {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 800px;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.line1,
+.line2 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.alternativa {
+  background-color: #3AFC4D;
+  color: black;
+  border-radius: 30px;
+  font-family: "Roboto";
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 350px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alternativa:hover {
+  transform: scale(1.1);
+  outline: 3px solid white;
+  transition: 0.2s;
+  outline-offset: 3px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  align-items: center;
+  height: 63px;
+  margin-bottom: 15px;
+}
+
+
+@media (max-width:850px) {
+  body {
+    height: auto;
+		padding-top: 20px;
+  }
+
+  .line1,
+  .line2 {
+    flex-direction: column;
+  }
+
+  .line1 .alternativa,
+  .line2 .alternativa {
+    margin-top: 15px;
+  }
+
+  .alternativas {
+    align-items: center;
+  }
+
+  .conteudo,
+  .alternativa {
+    min-width: 260px;
+  }
+
+  nav {
+    min-width: 200px;
+  }
+}
