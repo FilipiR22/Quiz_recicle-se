@@ -45,8 +45,8 @@
         document.querySelector("a#alt-1").style.backgroundColor = "red";
         document.querySelector("a#alt-3").style.backgroundColor = "red";
         document.querySelector("a#alt-4").style.backgroundColor = "red";
-        document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
-        document.querySelector("p#Result_parcial").style.color = "#4bdd4b";
+        document.querySelector("p#Result_parcial").textContent = "Resposta correta!";
+        document.querySelector("p#Result_parcial").style.color = "#874100";
         document.querySelector("h1.pergunta").textContent = "Justificativa: A Doutrina Truman foi a política externa dos Estados Unidos que teve por objetivo combater o avanço do comunismo. ";
         document.querySelector("a#alt-1").setAttribute("disabled", "true");
         document.querySelector("a#alt-3").setAttribute("disabled", "true");
@@ -57,13 +57,13 @@
         document.querySelector("a#next-button").setAttribute("disabled", "false");
         document.querySelector("a#next-button").style.pointerEvents = "";
       } else {
-        document.querySelector("p#Result_parcial").textContent = "Resposta errada, tente novamente.";
-        document.querySelector("p#Result_parcial").style.color = "red";
+        document.querySelector("p#Result_parcial").textContent = "Resposta errada, tente novamente!";
+        document.querySelector("p#Result_parcial").style.color = "#e90505";
         errou += 1
       }
       if (errou === 2) {
         window.alert("Que tal pensar um pouco mais?")
-        window.location.href = 'https://questionario-coletivo.agenciaweb.repl.co/index.html'
+        window.location.href = 'index.html'
         errou += 1
       }
     }
