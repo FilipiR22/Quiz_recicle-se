@@ -38,8 +38,8 @@
       </div>
     </div>
     <a href="escravidao.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt=""></a>
-    <a id="next-button" class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/Logo-Atlas.svg"
-        alt="Atlas de Asgard-logo"></a>
+    <a id="next-button" class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/logo_recicle-se.svg"
+      alt="Atlas de Asgard-logo"></a>
   </main>
 
   <script>
@@ -52,7 +52,7 @@
         document.querySelector("a#alt-2").style.backgroundColor = "red";
         document.querySelector("a#alt-4").style.backgroundColor = "red";
         document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
-        document.querySelector("p#Result_parcial").style.color = "green";
+        document.querySelector("p#Result_parcial").style.color = "#2ED835";
         document.querySelector("h2.pergunta").textContent = "Justificativa: As melhorias nas comunicações e no transporte têm facilitado a migração internacional, tornando mais fácil para as pessoas se conectarem, obterem informações sobre oportunidades em outros países e se deslocarem de maneira mais eficiente para buscar melhores condições de vida, trabalho ou estudo. Isso não reduziu necessariamente a migração, mas a tornou mais acessível e viável para um número maior de pessoas.";
         document.querySelector("a#alt-1").setAttribute("disabled", "true");
         document.querySelector("a#alt-2").setAttribute("disabled", "true");
@@ -69,7 +69,6 @@
       }
       if (errou === 2) {
         window.alert("Que tal pensar um pouco mais?")
-        window.location.href = 'https://questionario-coletivo.agenciaweb.repl.co/index.html'
         errou += 1
       }
     }
