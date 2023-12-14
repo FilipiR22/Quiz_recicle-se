@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Migração</title>
+  <link href="../assets/css/perguntas.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../assets/imagens/logo_recicle-se.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <p id="Result_parcial"></p>
+  </header>
+  <main>
+    <div class="conteudo">
+      <h2 class="pergunta">Qual é a única solução errada para o problema do lixo no Brasil?</h2>
+      <div class="alternativas">
+        <div class="line1">
+          <a id="alt-1" class="alternativa" onclick="clicou(false);">a) Investir na coleta seletiva.</a>
+          <a id="alt-2" class="alternativa" onclick="clicou(false);">b) Investir na educação ambiental.</a>
+        </div>
+        <div class="line2">
+          <a id="alt-3" class="alternativa" onclick="clicou(true);">c) A principal solução para o problema do lixo no Brasil é a proibição da produção de lixo.</a>
+          <a id="alt-4" class="alternativa" onclick="clicou(false);">d) CInvestir em tecnologias para o tratamento de resíduos.</a>
+        </div>
+      </div>
+    </div>
+    <a href="impacto.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt="voltar"></a>
+    <a id="next-button" class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/logo_recicle-se.svg"
+        alt="Atlas de Asgard-logo"></a>
+  </main>
+
+  <script>
+    var errou = 0
+    document.querySelector("a#next-button").setAttribute("disabled", "true");
+    document.querySelector("a#next-button").style.pointerEvents = "none";
+    function clicou(acertou) {
+      if (acertou === true) {
+        document.querySelector("a#alt-1").style.backgroundColor = "red";
+        document.querySelector("a#alt-2").style.backgroundColor = "red";
+        document.querySelector("a#alt-4").style.backgroundColor = "red";
+        document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
+        document.querySelector("p#Result_parcial").style.color = "green";
+        document.querySelector("h2.pergunta").textContent = "Justificativa: O problema do lixo no Brasil é complexo e requer a adoção de uma combinação de soluções. Investir na coleta seletiva é importante para separar os resíduos recicláveis dos orgânicos e dos perigosos. Investir na educação ambiental é importante para conscientizar a população sobre a importância da redução, reutilização e reciclagem do lixo. Investir em tecnologias para o tratamento de resíduos é importante para tratar os resíduos que não podem ser reciclados ou reutilizados. Todas as alternativas são necessárias para resolver o problema do lixo no Brasil. A coleta seletiva é essencial para reduzir a quantidade de lixo que vai para os aterros sanitários. A educação ambiental é essencial para conscientizar a população sobre a importância da redução, reutilização e reciclagem do lixo. As tecnologias para o tratamento de resíduos são essenciais para tratar os resíduos que não podem ser reciclados ou reutilizados.";
+        document.querySelector("a#alt-1").setAttribute("disabled", "true");
+        document.querySelector("a#alt-2").setAttribute("disabled", "true");
+        document.querySelector("a#alt-4").setAttribute("disabled", "true");
+        document.querySelector("a#alt-1").style.pointerEvents = "none";
+        document.querySelector("a#alt-2").style.pointerEvents = "none";
+        document.querySelector("a#alt-4").style.pointerEvents = "none";
+        document.querySelector("a#next-button").setAttribute("disabled", "false");
+        document.querySelector("a#next-button").style.pointerEvents = "";
+      } else {
+        document.querySelector("p#Result_parcial").textContent = "Resposta errada, tente novamente.";
+        document.querySelector("p#Result_parcial").style.color = "red";
+        errou += 1
+      }
+      if (errou === 2) {
+        window.alert("Que tal pensar um pouco mais?")
+        errou += 1
+      }
+    }
+  </script>
+</body>
+
+</html>

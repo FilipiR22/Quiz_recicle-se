@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Escravidão</title>
+  <link href="../assets/css/perguntas.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../assets/imagens/logo_recicle-se.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <p id="Result_parcial"></p>
+  </header>
+  <main>
+    <div class="conteudo">
+      <h1 class="pergunta">Qual é o principal impacto ambiental do descarte incorreto do lixo?</h1>
+      <div class="alternativas">
+        <div class="line1">
+          <a id="alt-1" class="alternativa" onclick="clicou(false)">a) A contaminação do solo.</a>
+          <a id="alt-2" class="alternativa" onclick="clicou(false)">b) A poluição do ar.</a>
+        </div>
+        <div class="line2">
+          <a id="alt-3" class="alternativa" onclick="clicou(false)">c) A poluição da água.</a>
+          <a id="alt-4" class="alternativa" onclick="clicou(true)">d) Todos os impactos citados são possíveis.
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="lixao-aterro.html"><img src="../assets/icons/arrow-left-solid.svg" class="setas" alt="voltar"></a>
+      <a id="next-button" href="lixo_brasil.html"><img src="../assets/icons/arrow-right-long-solid.svg" class="setas"
+          alt="próximo">
+      </a>
+    </nav>
+    <a class="icon-logo" href="../index.html"><img id="logo" src="../assets/imagens/logo_recicle-se.svg"
+        alt="Atlas de Asgard-logo"></a>
+  </main>
+
+  <script>
+    var errou = 0
+    document.querySelector("a#next-button").setAttribute("disabled", "true");
+    document.querySelector("a#next-button").style.pointerEvents = "none";
+    function clicou(acertou) {
+      if (acertou === true) {
+        document.querySelector("a#alt-1").style.backgroundColor = "red";
+        document.querySelector("a#alt-3").style.backgroundColor = "red";
+        document.querySelector("a#alt-4").style.backgroundColor = "red";
+        document.querySelector("p#Result_parcial").textContent = "Certa resposta!!";
+        document.querySelector("p#Result_parcial").style.color = "green";
+        document.querySelector("h3.pergunta").textContent = "Justificativa: O descarte incorreto do lixo pode causar três principais impactos ambientais: A contaminação do solo. O lixo pode contaminar o solo por meio da infiltração de chorume, que é um líquido resultante da decomposição dos resíduos; a poluição do ar. A queima de lixo libera gases tóxicos na atmosfera, que contribuem para a poluição do ar; a poluição da água. O lixo pode contaminar a água subterrânea por meio da infiltração de chorume ou da poluição de rios e lagos.";
+        document.querySelector("a#alt-1").setAttribute("disabled", "true");
+        document.querySelector("a#alt-3").setAttribute("disabled", "true");
+        document.querySelector("a#alt-4").setAttribute("disabled", "true");
+        document.querySelector("a#alt-1").style.pointerEvents = "none";
+        document.querySelector("a#alt-3").style.pointerEvents = "none";
+        document.querySelector("a#alt-4").style.pointerEvents = "none";
+        document.querySelector("a#next-button").setAttribute("disabled", "false");
+        document.querySelector("a#next-button").style.pointerEvents = "";
+      } else {
+        document.querySelector("p#Result_parcial").textContent = "Resposta errada, tente novamente.";
+        document.querySelector("p#Result_parcial").style.color = "red";
+        errou += 1
+      }
+      if (errou === 2) {
+        window.alert("Que tal pensar um pouco mais?")
+        window.location.href = 'https://questionario-coletivo.agenciaweb.repl.co/index.html'
+        errou += 1
+      }
+    }
+  </script>
+</body>
+
+</html>

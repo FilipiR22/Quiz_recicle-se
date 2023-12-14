@@ -28,6 +28,10 @@ main {
   align-items: center;
 }
 
+#logo-pag-inicial{
+	transform:translateX(-20px);
+}
+
 img {
   margin-left: 35px;
   width: 700px;
